@@ -14,7 +14,7 @@
 }
 
 .arrow-btn {
-  background-color: #007bff;
+  background-color: #f0f0f0;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -27,6 +27,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
 }
 
 .arrow-btn:hover {
@@ -75,30 +76,54 @@
 }
 
 @media (max-width: 768px) {
-  .review-cards-container {
-    flex-direction: column; /* Stack reviews vertically */
-    overflow: visible; /* Allow full visibility of stacked reviews */
-    width: 100%; /* Adjust width for smaller screens */
-  }
-
-  .review-card {
-    flex: 1 1 auto; /* Adjust card size */
-    margin-bottom: 1.5rem; /* Add spacing between stacked cards */
+  .review-row {
+    position: relative; /* Enable positioning for arrows */
   }
 
   .arrow-btn {
-    display: none; /* Hide navigation arrows on smaller screens */
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: #0056b3; /* Ensure visibility */
+    color: #fff;
+  }
+
+  .arrow-btn:first-of-type {
+    left: 10px; /* Position left arrow */
+  }
+
+  .arrow-btn:last-of-type {
+    right: 10px; /* Position right arrow */
+  }
+
+  .review-cards-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    width: 100%; /* Ensure full width for the container */
+  }
+
+  .review-card {
+    flex: 0 0 90%; /* Reduce card width */
+    padding: 1rem; /* Reduce padding */
+    margin: 0 auto; /* Center the card */
+    scroll-snap-align: center; /* Center the card in the viewport */
   }
 }
 
 @media (max-width: 480px) {
   .review-card {
-    padding: 1rem; /* Adjust padding for smaller screens */
+    flex: 0 0 95%; /* Further reduce card width */
+    padding: 0.8rem; /* Adjust padding for smaller screens */
   }
 
   .review-img {
-    width: 60px; /* Reduce image size */
-    height: 60px;
+    width: 50px; /* Further reduce image size */
+    height: 50px;
   }
 }
 

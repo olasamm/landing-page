@@ -8,7 +8,9 @@ const Students = () => {
         <div className="row">
             <div className="col-12 col-md-6 my-5">
                 <h4 className="fw-bold mx-4">For Student</h4>
-                <p className="mx-4  my-3 student">Easily submit your assignment, track <br /> deadlines, and receive Feedback-all in <br /> one place. Stay organized and never miss <br /> a deadline again. Our platform is designed <br /> to make learning smoother and stress-free. <br /> Sign up today and stay ahead</p>
+                <p className="mx-4 my-3 student fs-10 fs-md-5">
+                Easily submit your assignment, track <br /> deadlines, and receive Feedback-all in <br /> one place. Stay organized and never miss <br /> a deadline again. Our platform is designed <br /> to make learning smoother and stress-free. <br /> Sign up today and stay ahead
+                </p>
                 <button type="button" className='btn btn-primary border-rounder-0'>Sign up</button>
             </div>
             <div className="col-12 col-md-6">
